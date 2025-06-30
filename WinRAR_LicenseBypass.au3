@@ -1,5 +1,6 @@
 #Region ; *** Dynamically added Include files ***
 #include <Array.au3>                                         ; added:06/30/25 13:57:23
+#include <Misc.au3>                                          ; added:06/30/25 14:18:38
 #EndRegion ; *** Dynamically added Include files ***
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_Compression=4
@@ -27,10 +28,11 @@ Else
 	_Debug("Main Thread", "License file installed successfully.")
 	MsgBox($MB_ICONINFORMATION, "Success", "WinRAR license file installed successfully.")
 EndIf
-Sleep(30000)
-
-
-
+ConsoleWrite("Press ENTER to exit!")
+While Not _IsPressed("0D")
+	Sleep(50)
+WEnd
+Exit
 #EndRegion ##### [Main Thread] #####
 
 #Region ##### UDFs #####
