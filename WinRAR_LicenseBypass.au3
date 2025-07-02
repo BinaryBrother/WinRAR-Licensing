@@ -1,14 +1,14 @@
-#Region ; *** Dynamically added Include files ***
-#include <Array.au3>                                         ; added:06/30/25 13:57:23
-#include <Misc.au3>                                          ; added:06/30/25 14:18:38
-#EndRegion ; *** Dynamically added Include files ***
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
+#AutoIt3Wrapper_Outfile_x64=..\WinRAR_LicenseBypass.exe
 #AutoIt3Wrapper_Compression=4
 #AutoIt3Wrapper_UseUpx=y
 #AutoIt3Wrapper_Change2CUI=y
 #AutoIt3Wrapper_Res_requestedExecutionLevel=highestAvailable
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****
+
 #Region ##### Includes #####
+#include <Array.au3>                                         ; added:06/30/25 13:57:23
+#include <Misc.au3>                                          ; added:06/30/25 14:18:38
 #include <MsgBoxConstants.au3>
 #EndRegion ##### Includes
 
@@ -47,7 +47,7 @@ Func _Debug($pFunction, $pData)
 	ConsoleWrite($pFunction & ": " & $pData & @CRLF)
 EndFunc   ;==>_Debug
 Func _WinRAR_GetFullPath()
-	Local $sWinRAR_RegistryPath = RegRead($WinRAR_RegistryPath[0], $gWinRAR_RegistryPath[1])
+	Local $sWinRAR_RegistryPath = RegRead($gWinRAR_RegistryPath[0], $gWinRAR_RegistryPath[1])
 	If Not @error And $sWinRAR_RegistryPath <> "" Then
 		_Debug("_WinRAR_GetFullPath()", "WinRAR found in Registry: " & $sWinRAR_RegistryPath)
 		If FileExists($sWinRAR_RegistryPath) Then
@@ -61,8 +61,8 @@ Func _WinRAR_GetFullPath()
 		_Debug("_WinRAR_GetFullPath()", "WinRAR executable NOT found at the registry path: " & $sWinRAR_RegistryPath)
 		_Debug("_WinRAR_GetFullPath()", "Checking default installation path...")
 		If FileExists($gWinRAR_DefaultPath) Then
-			_Debug("_WinRAR_GetFullPath()", "WinRAR found at $WinRAR_DefaultPath = " & $WinRAR_DefaultPath)
-			Return $WinRAR_DefaultPath
+			_Debug("_WinRAR_GetFullPath()", "WinRAR found at $WinRAR_DefaultPath = " & $gWinRAR_DefaultPath)
+			Return $gWinRAR_DefaultPath
 		Else
 			_Debug("_WinRAR_GetFullPath()", "WinRAR executable NOT found.")
 			Return SetError(2, 0, False)
