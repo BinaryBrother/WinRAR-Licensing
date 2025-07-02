@@ -5,7 +5,7 @@ You can find more licenses, <a href="https://github.com/BinaryBrother/WinRAR-Lic
 This program simply unpacks a valid license (rarreg.key) to C:\Program Files\WinRAR.
 
 <b>INSTRUCTIONS:</b><br>
-1.) Download and install the latest official version of WinRAR, from <a href="https://www.win-rar.com/download.html?&L=0">here</a><BR>
+1.) Download and install the latest official version of WinRAR, from <a href="https://www.win-rar.com/download.html">here</a><BR>
 2.) Download the latest <a href="https://github.com/BinaryBrother/WinRAR-Licensing/releases">WinRAR-Licensing</a> release and run it.
 
 <b>ISSUES/DOESN'T WORK</b><br>
