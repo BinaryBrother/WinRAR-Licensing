@@ -16,4 +16,5 @@ This program simply unpacks a valid license (rarreg.key) to C:\Program Files\Win
 Create a new post, <a href="https://github.com/BinaryBrother/WinRAR-Licensing/issues">here</a> in the <a href="https://github.com/BinaryBrother/WinRAR-Licensing/issues">Issues</a> section.
 
 Last tested WinRAR version: <b>v7.12</b> (Current as of writing)
+
 Last tested OS:<b> Windows 11 24H2</b>
