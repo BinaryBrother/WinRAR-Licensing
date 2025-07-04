@@ -14,3 +14,4 @@
 <h1><strong>Reporting an Issue</strong></h1>
 <p>Create a new post, <a href="https://github.com/BinaryBrother/WinRAR-Licensing/issues">here</a> in the <a href="https://github.com/BinaryBrother/WinRAR-Licensing/issues">Issues</a> section.</p>
 <p>Last tested WinRAR version: <strong>v7.12</strong> (Current as of writing) <br />Last tested OS:<strong> Windows 11 24H2</strong></p>
+<p><strong>Please Report an Issue if a WinRAR update breaks the licensing.</strong></p>
