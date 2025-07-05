@@ -10,7 +10,8 @@
 <h1>INSTRUCTIONS</h1>
 <p>1.) Download and install the latest official version of WinRAR, from the official site&nbsp;<a href="https://www.win-rar.com/download.html">here</a><br /> 2.) Download the latest <a href="https://github.com/BinaryBrother/WinRAR-Licensing/releases">WinRAR-Licensing</a> release and run it.</p>
 <h1><strong>Troubleshooting</strong></h1>
-<p>1.) Uninstall WinRAR and download the <a href="https://www.win-rar.com/fileadmin/winrar-versions/downloader/WinRAR-712.exe">last tested version</a> of WinRAR <strong>v7.12</strong>. <em>(WinRAR Official Upload)</em><br /> 2.) Download the latest <a href="https://github.com/BinaryBrother/WinRAR-Licensing/releases">WinRAR-Licensing</a> release and run it again.</p>
+<p>1.) Uninstall WinRAR and download the <a href="https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-712.exe">last tested version</a> of WinRAR <strong>v7.12</strong>. <em>(WinRAR Official Upload)</em><br /> 2.) Download the latest <a href="https://github.com/BinaryBrother/WinRAR-Licensing/releases">WinRAR-Licensing</a> release and run it again.</p>
 <h1><strong>Reporting an Issue</strong></h1>
 <p>Create a new post, <a href="https://github.com/BinaryBrother/WinRAR-Licensing/issues">here</a> in the <a href="https://github.com/BinaryBrother/WinRAR-Licensing/issues">Issues</a> section.</p>
 <p>Last tested WinRAR version: <strong>v7.12</strong> (Current as of writing) <br />Last tested OS:<strong> Windows 11 24H2</strong></p>
+<p><strong>Please Report an Issue if a WinRAR update breaks the licensing.</strong></p>
