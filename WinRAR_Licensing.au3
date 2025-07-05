@@ -62,5 +62,5 @@ _Debug("MAIN", "New license successfully written to: " & $gWinRAR_ActualPath & "
 _ShowLicenseWindow($gWinRAR_ActualPath & "\WinRAR.exe")
 
 _Exit()
-Exit
+
 #EndRegion ##### [Main] #####

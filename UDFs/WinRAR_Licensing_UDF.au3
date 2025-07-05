@@ -95,7 +95,6 @@ Func _ShowLicenseWindow($pWinRAR_FullPath)
 	Sleep(500)
 	Send("a")
 	_Debug("_ShowLicenseWindow", "License window should now be active.")
-	;Local $hWinRAR = WinGetHandle("[CLASS:WinRAR]")
 EndFunc   ;==>_ShowLicenseWindow
 
 Func _Exit()
