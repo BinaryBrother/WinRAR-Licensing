@@ -16,4 +16,4 @@
 <p>Last tested WinRAR version: <strong>v7.12</strong> (Current as of writing) <br />Last tested OS:<strong> Windows 11 24H2</strong></p>
 <p><strong>Please Report an Issue if a WinRAR update breaks the licensing.</strong></p>
 <h1><strong>Message to Software Vendors</strong></h1>
-<p>I provide the neccerary information for these vulnerabilities to be patched. True Apps is purely for educational review.</p>
+<p>I provide the neccerary information for these vulnerabilities to be patched. True Apps is purely for educational review. This is why we release FOSS examples, for transparency.</p>
