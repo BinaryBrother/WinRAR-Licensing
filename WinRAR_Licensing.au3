@@ -1,4 +1,5 @@
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
+#AutoIt3Wrapper_Icon=Resources\icons8-winrar-1500.ico
 #AutoIt3Wrapper_Outfile_x64=..\WinRAR_Licensing.exe
 #AutoIt3Wrapper_Compression=4
 #AutoIt3Wrapper_UseUpx=y
@@ -13,22 +14,26 @@
 #include "./UDFs/WinRAR_Licensing_UDF.au3"
 #EndRegion ##### Includes #####
 
+#Region ##### Variables #####
+Global Const $gWinRAR_RegistryPath[2] = ["HKLM\Software\WinRAR", "exe64"]
+Global Const $gWinRAR_DefaultPath = @ProgramFilesDir & "\WinRAR\WinRAR.exe"
+Global $gWinRAR_ActualPath, $gLicenseText, $gAnswer, $gRun
+#EndRegion ##### Variables #####
+
 #Region ##### OPTIONS/MISC #####
-Opt("MustDeclareVars", 1)                              ; added:06/30/25 13:57:23
-Opt("TrayIconHide", 1)                                 ; added:06/30/25 13:57:23
+Opt("MustDeclareVars", 1)
+Opt("TrayIconHide", 1)
 #EndRegion ##### OPTIONS/MISC #####
 
 ; Unpack the WinRAR license generator compiled from https://github.com/bitcookies/winrar-keygen
 ; We'll use this later.
 FileInstall("..\winrar-keygen-x64.exe", @TempDir & "\winrar-keygen-x64.exe", 1)
 
-#Region ##### Variables #####
-Global Const $gWinRAR_RegistryPath[2] = ["HKLM\Software\WinRAR", "exe64"]
-Global Const $gWinRAR_DefaultPath = @ProgramFilesDir & "\WinRAR\WinRAR.exe"
-Global $gWinRAR_ActualPath, $gLicenseText, $gAnswer
-#EndRegion ##### Variables #####
-
 #Region ##### [Main] #####
+; Kill any existing WinRAR processes to avoid conflicts.
+_CloseWinRAR()
+
+; Find the WinRAR installation path.
 $gWinRAR_ActualPath = _WinRAR_GetPath($gWinRAR_RegistryPath, $gWinRAR_DefaultPath)
 If @error Then
 	_Debug("MAIN", "Terminal Error.")
@@ -52,14 +57,10 @@ _Debug("MAIN", "Old license file removed, if it existed.")
 
 ; Install the license file in the WinRAR directory.
 FileWrite($gWinRAR_ActualPath & "\rarreg.key", $gLicenseText)
-_Debug("MAIN", "New license file written to: " & $gWinRAR_ActualPath & "\rarreg.key")
-_Exit()
+_Debug("MAIN", "New license successfully written to: " & $gWinRAR_ActualPath & "\rarreg.key")
 
-Func _Exit()
-	ConsoleWrite("Press RETURN/ENTER to exit!")
-	While Not _IsPressed("0D")
-		Sleep(50)
-	WEnd
-	Exit
-EndFunc
+_ShowLicenseWindow($gWinRAR_ActualPath & "\WinRAR.exe")
+
+_Exit()
+Exit
 #EndRegion ##### [Main] #####
